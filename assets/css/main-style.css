@@ -1,0 +1,281 @@
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my-online-client-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.my-online-client-form:hover {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.my-online-client-form h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-sizing:border-box;
+}
+
+.form-group input:focus {
+    border-color: #0073aa;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 115, 170, 0.2);
+    outline: none;
+}
+
+.form-group input:hover {
+    border-color: #0073aa;
+}
+
+.form-group .button-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #0073aa;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.form-group .button-primary:hover {
+    background-color: #005a87;
+    box-shadow: 0px 4px 10px rgba(0, 115, 170, 0.3);
+}
+
+.form-group .button-primary:active {
+    background-color: #003d5c;
+    transform: translateY(2px);
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form-message.success {
+    background-color: #e8f5e9;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.cst_map_items {
+	width:100% !important;
+}
+
+.cst_pin_icon {
+    position: relative;
+    z-index: 9999;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% !important;
+    border: 2px solid #ffffff !important;
+    background-color: #4ab5bd!important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Add a hover effect to show the clickable area (optional - remove if not wanted) */
+.cst_pin:hover .cst_pin_icon {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.cst_usa_map_wrapper {
+    position: relative;
+}
+
+.cst_usa_map_wrapper svg {
+    width: 100%;
+    height: auto;
+}
+
+.modal-card-popup {
+    position: absolute;
+    top: -284px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    min-height: 284px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(2,59,89,0.8) !important;
+    pointer-events: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-card-popup.visible {
+    opacity: 1;
+    z-index: 99999;
+    pointer-events: all;
+}
+
+/* Ensure popup container doesn't interfere with clicks */
+.cst_pin .modal-card-popup {
+    position: absolute;
+    top: -284px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/* Modal card styles */
+.modal-card {
+    background: transparent;
+    height: 100%;
+}
+
+.modal-card .title {
+    padding: 20px !important;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cst_pin_icon.active {
+    background: black !important;
+}
+
+/* Close button */
+.popup-cross-btn {
+    position: absolute;
+    overflow: hidden;
+    right: 8px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    opacity: .8;
+    background-color: #fff !important;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.popup-cross-btn:hover {
+    opacity: 1;
+}
+
+.popup-cross-btn:before,
+.popup-cross-btn:after {
+    position: absolute;
+    top: 3.5px;
+    left: 9.5px;
+    content: " ";
+    height: 13px;
+    width: 1px;
+    background-color: #000;
+}
+
+.popup-cross-btn:before {
+    transform: rotate(45deg);
+}
+
+.popup-cross-btn:after {
+    transform: rotate(-45deg);
+}
+
+/* Hide the hidden span but keep it accessible */
+.popup-cross-btn .hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* Image styling */
+.cst_property_img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.cst_property_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    color: #fff;
+}
+
+.cst_pins_wrapper .cst_pin {
+    pointer-events: all;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* Ensure popup content is visible */
+.modal-card ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.modal-card ul li {
+    list-style: none !important;
+    color: #023b59 !important;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: left !important;
+    font-family: 'Source Sans Pro', Helvetica, Arial, Lucida, sans-serif;
+}
+
+.modal-card ul li a {
+    word-break: break-all;
+}
+
